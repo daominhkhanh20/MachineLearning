@@ -1,32 +1,39 @@
 #include<bits/stdc++.h>
 using namespace std;
-int n,m;
-vector<int>a,b;
-void input(vector<int>&v,int size){
-    for(int i=0;i<=size;i++){
-        int temp;
-        cin>>temp;
-        v.push_back(temp);
-    }
+
+struct bigNum{
+   char sign;
+   string number;
+};
+
+bigNum mul(bigNum a,bigNum b){
+   int n=a.number.size();
+   int m=b.number.size();
+   int l=n+m;
+   string temp;
+   temp.resize(l);
+   bigNum c;
+   for(int i=0;i<n;i++){
+      
+      for(int j=0;j<m;j++){
+
+      }
+   }
+   return c;
+}
+bigNum input(){
+   bigNum c;
+   string temp;
+   cin>>temp;
+   c.sign=temp[0];
+   c.number=temp.substr(1,temp.size()-1);
+   return c;
 }
 int main()
 {
-    cin>>n;
-    input(a,n);
-    cin>>m;
-    input(b,m);
-    vector<int>c;
-    cout<<"Cal";
-    int k=n+m;
-    for(int i=0;i<=k;i++){
-       for(int j=i;j>=0;j--){
-         if(i-j<=m && j<=n){
-            c[i]+=a[j]*b[i-j];
-         }
-       }
-    }
-    for(int i=0;i<=k;i++){
-      cout<<c[i]<<" ";
-    }
+    bigNum a=input();
+    bigNum b=input();
+    cout<<a.sign<<" "<<a.number;
+    bigNum c=mul(a,b);
     return 0;
 }
