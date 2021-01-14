@@ -1,3 +1,8 @@
+## Install package and run project
+- pip install -r requirement.txt
+- python3 test.py
+
+
 ## Idea for project
  - 1: By using neural network, Snake can be learned to eat the most apple by themselves
  - 2:But we need the data for neural, we initialize data by having the snake play itself or you can play snake for generate data(about 40 game).
